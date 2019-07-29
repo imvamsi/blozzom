@@ -82,3 +82,13 @@ body {
   height: 100%;
   color: #fff;
 }
+
+#aboutus-section {
+  min-height: 250px;
+  background-attachment: fixed;
+  background: url("../img/image2.jpg");
+  background-position: 0 -350px;
+}
+.img-section {
+  margin-top: -93px;
+}
