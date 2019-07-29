@@ -199,6 +199,46 @@
         </div>
       </div>
     </section>
+
+    <!--Video modal section-->
+    <section id="video-section">
+      <div class="video-overlay">
+        <div class="row">
+          <div class="col">
+            <div class="container p-5 align-self-center">
+              <a
+                href="#"
+                class="video"
+                data-toggle="modal"
+                data-target="#videoModal"
+                data-video="https://www.youtube.com/embed/PlkL9Hr7PhA?controls=0"
+              >
+                <i class="fa fa-play fa-3x"></i
+              ></a>
+              <h3 class="align-self-center">See what we can do</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="modal fade" id="videoModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+            <iframe
+              src=""
+              frameborder="0"
+              height="350"
+              width="100%"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -214,5 +254,23 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      // Video Play
+      $(function() {
+        // Auto play modal video
+        $(".video").click(function() {
+          var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-video"),
+            videoSRCauto =
+              videoSRC +
+              "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function() {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
