@@ -92,3 +92,20 @@ body {
 .img-section {
   margin-top: -93px;
 }
+
+#header-section {
+  background: url("../img//image2.jpg");
+  height: 250px;
+  color: #fff;
+  background-attachment: fixed;
+  background-position: 0 -300px;
+}
+
+#faq-section a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#faq .card-body #faq .card-header {
+  background: #333 !important;
+}
